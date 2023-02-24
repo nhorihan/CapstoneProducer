@@ -22,6 +22,8 @@ jobs:
       - name: Build with Maven
         run: |
           mvn -B package --file pom.xml
+          VERSION=$(mvn --non-recursive help:evaluate -Dexpression=project.version | grep -v '\[.*')
+          echo $VERSION
       - name: Docker
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
