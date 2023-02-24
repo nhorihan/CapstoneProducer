@@ -27,7 +27,7 @@ jobs:
       - name: Docker
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: capstoneproducer/kafkaproducer
+          image: capstoneproducer/producer
           registry: docker.io
           tags: $(mvn --non-recursive help:evaluate -Dexpression=project.version | grep -v '\[.*')
           username: ${{ secrets.DOCKER_USERNAME }}
