@@ -1,0 +1,3 @@
+com\capstone\producer\controller\ProducerController.class
+Application.class
+com\capstone\producer\kafka\kafkaProducerExample.class
