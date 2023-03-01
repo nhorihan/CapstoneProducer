@@ -15,6 +15,6 @@ public class ProducerController {
     @ResponseBody
     public String controller(@PathVariable("message") String message) {
         RecordMetadata metadata = KafkaProducerExample.runProducer(message);
-        return "Message Sent to Kafka Broker was: " + message + "\n" + "MetaData from send: " + metadata.toString();
+        return "Message Sent to Kafka Broker was: " + message + "\n" + "MetaData from send topic: " + metadata.topic() + " Partition: " + metadata.partition() + " Timestamp: " + metadata.timestamp() + " Offset: "+ metadata.offset();
     }
 }
