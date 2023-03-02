@@ -5,7 +5,7 @@ and pushes it to the Kafka topic that the consumer is listening to: the URL to t
 http://34.198.166.4/message/{message}
 Where '{message}' is whatever you please.
 If you receive a 500 error it is likely that our AWS instance that is running the broker is stopped, as it costs 
-a decent ammount to keep running 24/7,so we shut it down when not developing or testing.
+a decent amount to keep running 24/7,so we shut it down when not developing or testing.
 
 **Release Notes**
 Version 1.0.0-SNAPSHOT:
